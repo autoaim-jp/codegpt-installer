@@ -23,3 +23,12 @@ export PATH="$CODEGPT_INSTALL/bin:$PATH"
 
 codegpt version
 
+cat <<EOF
+exec these commands
+source ~/.bashrc
+codegpt config set openai.max_tokens 4000
+codegpt config set openai.timeout 120s
+codegpt config set openai.model gpt-4
+HISTCONTROL=ignorespace codegpt config set openai.api_key sk-*****
+EOF
+
